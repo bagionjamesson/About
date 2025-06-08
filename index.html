@@ -1,3 +1,151 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png"> <!-- Assuming logo.png is in the parent directory (public/) -->
+  <!-- Removed invalid stylesheet link: <link rel="stylesheet" href="my-website/public/menu.html"> -->
+  <!--  Link to your external CSS file -->
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <!-- Navigation/Menu -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="https://bagionjamesson.github.io/Home/" style="display: flex; align-items: center; text-decoration: none;"> <!-- Path to menu.html from Course/ -->
+        <img src="logo.png" alt="Logo" class="navbar-logo"> <!-- Path to logo.png from Course/ -->
+        <div class="navbar-title">
+          <span class="auto">Auto</span><span class="learn">Learn</span> <span class="ph">PH</span>
+        </div>
+      </a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="https://bagionjamesson.github.io/Home/">Home</a></li>
+      <li><a href="https://bagionjamesson.github.io/Modules/">Modules</a></li>
+      <li class="has-dropdown">  <!-- Add 'has-dropdown' class here -->
+        <a href="https://bagionjamesson.github.io/Modules/">Learning Materials</a> <!-- This can link to a general materials page or be just a trigger -->
+        <ul class="dropdown-submenu"> <!-- This is the new dropdown list -->
+          <li><a href="https://e-tesda.gov.ph/" target="_blank">TESDA Online</a></li>
+          <li><a href="https://www.youtube.com/@TESDAOfficial" target="_blank">TESDA YouTube</a></li>
+          <li><a href="https://www.automotiveforums.com/">Automotive Forums</a></li> <!-- Add actual link later -->
+          <li><a href="https://www.youtube.com/@HowtoAutomotive">Video Tutorials</a></li>   <!-- Add actual link later -->
+        </ul>
+      </li>
+      <li><a href="https://bagionjamesson.github.io/Home/" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1: Website Introduction (Styled like About-James) -->
+<section class="section" style="background: linear-gradient(120deg, #e3eafc 0%, #f7f9fc 100%); padding: 70px 0 60px 0;">
+  <div style="max-width: 950px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+    <!-- Website Logo -->
+    <div style="flex: 1 1 320px; display: flex; justify-content: center;">
+      <div style="background: linear-gradient(135deg, #223366 0%, #3b4e7a 100%); border-radius: 50%; padding: 18px; box-shadow: 0 8px 32px rgba(34,51,102,0.13); display: flex; align-items: center; justify-content: center;">
+        <img src="logo.png" alt="AutoLearn PH Logo" style="width: 180px; height: 180px; object-fit: contain; border-radius: 50%; border: 6px solid #FFD600; box-shadow: 0 4px 24px rgba(34,51,102,0.18); background: #fff;">
+      </div>
+    </div>
+    <!-- Website Info -->
+    <div style="flex: 2 1 400px; color: #223366; padding: 0 10px;">
+      <h2 style="color: #223366; font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: 1px;">AutoLearn PH</h2>
+      <h4 style="color: #3b4e7a; font-size: 1.18rem; font-weight: 500; margin-bottom: 20px;">Your Automotive Learning Hub</h4>
+      <p style="font-size: 1.13rem; margin-bottom: 18px; line-height: 1.7;">
+        <strong>AutoLearn PH</strong> is a learning platform dedicated to helping students, trainees, and enthusiasts gain practical, competency-based knowledge in automotive servicing. This project provides easy-to-understand modules, lessons, and self-learning tools aligned with TESDA standards and the K to 12 TLE curriculum.
+      </p>
+      <p style="font-size: 1.13rem; margin-bottom: 18px; line-height: 1.7;">
+        Whether you’re preparing for assessments, pursuing certification, or simply passionate about cars, AutoLearn PH is here to support your learning journey—anytime, anywhere.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Author Introduction (Styled like About-James) -->
+<section class="section" style="background: linear-gradient(120deg, #223366 0%, #1a2540 100%); padding: 70px 0 60px 0;">
+  <div style="max-width: 950px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; background: rgba(255,255,255,0.01);">
+    <!-- Author Image -->
+    <div style="flex: 1 1 320px; display: flex; justify-content: center;">
+      <div style="background: linear-gradient(135deg, #FFD600 0%, #fffbe6 100%); border-radius: 50%; padding: 10px; box-shadow: 0 8px 32px rgba(255,214,0,0.13);">
+        <img src="author.jpg" alt="Bagion Jamesson" style="width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 6px solid #223366; box-shadow: 0 4px 24px rgba(34,51,102,0.18);">
+      </div>
+    </div>
+    <!-- Author Info -->
+    <div style="flex: 2 1 400px; color: #fff; padding: 0 10px;">
+      <h2 style="color: #FFD600; font-size: 2.3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: 1px;">Bagion Jamesson</h2>
+      <h4 style="color: #fff; font-size: 1.18rem; font-weight: 500; margin-bottom: 20px;">BTVTEd - Automotive Technology Student</h4>
+      <p style="font-size: 1.13rem; margin-bottom: 18px; line-height: 1.7;">
+        I am a passionate educator-in-training and automotive enthusiast, currently a 3rd-year Bachelor of Technical Vocational Teacher Education (BTVTEd) student majoring in Automotive Technology. My journey is driven by a commitment to empower future technicians and educators through practical, real-world knowledge.
+      </p>
+      <p style="font-size: 1.13rem; margin-bottom: 18px; line-height: 1.7;">
+        <strong>This website is my capstone project</strong>—a platform designed to make automotive learning accessible, engaging, and aligned with industry standards. I believe in the power of self-paced learning and sharing knowledge to uplift others.
+      </p>
+      <p style="color: #FFD600; font-size: 1.18rem; font-weight: 600; margin-top: 18px;">
+        Let’s grow together—one module at a time.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Section 3: Footer/Links -->
+  <footer class="footer-section">
+    <div class="footer-columns">
+      <!-- Column 1: About -->
+      <div class="footer-col">
+        <h3>AutoLearn PH <span class="footer-underline"></span></h3>
+        <div class="footer-desc">
+          Your complete automotive learning companion designed for Filipino learners. Aligned with TESDA standards and industry best practices.
+        </div>
+      </div>
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links <span class="footer-underline"></span></h3>
+        <ul>
+          <li><a href="https://bagionjamesson.github.io/Home/">Home</a></li>
+          <li><a href="https://bagionjamesson.github.io/Modules/">Modules</a></li>
+          <li><a href="https://bagionjamesson.github.io/Modules/">Learning Materials</a></li>
+          <li><a href="../about.html">About Us</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Learning Resources -->
+      <div class="footer-col">
+        <h3>Learning Resources <span class="footer-underline"></span></h3>
+        <ul>
+          <li><a href="https://e-tesda.gov.ph/" target="_blank">TESDA Online</a></li>
+          <li><a href="https://www.youtube.com/@TESDAOfficial" target="_blank">TESDA YouTube</a></li>
+          <li><a href="https://www.automotiveforums.com/">Automotive Forums</a></li>
+          <li><a href="https://www.youtube.com/@tutauto-velo9420">Video Tutorials</a></li>
+        </ul>
+      </div>
+      <!-- Column 4: Contact Us -->
+      <div class="footer-col">
+        <h3>Contact Us <span class="footer-underline"></span></h3>
+        <div class="footer-contact">
+          <a href="mailto:contact@autolearn.ph" class="footer-social-link mail" aria-label="Email">
+            <svg class="footer-icon" width="20" height="20" fill="#FFD600" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.99 7.99c.39.39 1.02.39 1.41 0L20 10.01V20H4z"/></svg>
+          </a>
+          bagionjamesson23@gmail.com
+        </div>
+        <div class="footer-contact">
+          <a href="tel:+639123456789" class="footer-social-link phone" aria-label="Phone">
+            <svg class="footer-icon" width="20" height="20" fill="#FFD600" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+          </a>
+          +63 912 345 6789
+        </div>
+        <div class="footer-contact">
+          <a href="https://goo.gl/maps/xyz" target="_blank" class="footer-social-link location" aria-label="Location">
+            <svg class="footer-icon" width="20" height="20" fill="#FFD600" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+          Valenzuela City, Philippines
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr style="border: none; border-top: 1px solid #3b4e7a; margin: 24px 0 12px 0;">
+      © 2023 AutoLearn PH. All rights reserved.
+    </div>
+  </footer>
+  <!-- If you need JavaScript for this page, it would go here -->
+  <!-- Link to your main JavaScript file -->
+  <script src="main.js"></script>
+</body>
 </html>
