@@ -11,8 +11,10 @@ body {
   justify-content: space-between;
   background: #285197;
   padding: 0 48px;
+  position: relative; /* Needed for positioning the absolute dropdown menu */
   height: 70px;
 }
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -133,6 +135,38 @@ body {
   color: #fff; /* Ensure text color remains white on hover */
 }
 
+/* Styles for the hamburger toggler button */
+.navbar-toggler {
+  display: none; /* Hidden by default, shown in media query */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 32px; /* Width of the hamburger icon */
+    height: 25px; /* Height of the hamburger icon */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Ensure it's above other nav items */
+    margin-left: auto; /* Pushes hamburger to the right if other elements are in navbar-left */
+}
+
+.navbar-toggler .toggler-icon-bar {
+  display: block;
+    width: 100%;
+    height: 3px; /* Thickness of the bars */
+    background-color: #fff; /* Color of the bars */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler .toggler-icon-bar + .toggler-icon-bar {
+  margin-top: 6px; /* Spacing between bars */
+}
+
+/* Animation for hamburger to "X" when active */
+.navbar-toggler.active .toggler-icon-bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.navbar-toggler.active .toggler-icon-bar:nth-child(2) { opacity: 0; }
+.navbar-toggler.active .toggler-icon-bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 
 /* ===== SECTION 1: HERO ===== */
@@ -318,8 +352,8 @@ body {
 /* ===== SECTION 3: FOOTER ===== */
 .footer-section {
   background: #285197;
-  color: #204080;
-  padding: 48px 0 24px 0;
+  color: #fff; /* Default text color for footer, though most elements override */
+  padding: 48px 48px 24px 48px; /* Added horizontal padding */
   text-align: center;
 }
 .footer-columns {
@@ -416,22 +450,73 @@ body {
     align-items: center;
     gap: 24px;
   }
+  /* Adjust navbar padding for medium screens, but don't change its flex direction yet */
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 0 16px;
-  }
-  .navbar-menu {
-    margin-top: 12px;
+    padding: 0 24px;
   }
   .footer-col {
     min-width: 0;
     width: 100%;
   }
+  .footer-section {
+    padding: 40px 24px 24px 24px; /* Adjust footer padding */
+  }
 }
-.card-emoji {
-  width:200px;
-  height:200px;
-  object-fit: contain;
-  margin-bottom: 10px;
+
+/* Small screens - Hamburger menu activation. Adjust 768px breakpoint as needed. */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px; /* Further reduced padding for navbar */
+    justify-content: center; /* Center the .navbar-left (logo/title) */
+    position: relative; /* Ensure it's a positioning context for absolute children */
+  }
+
+  .navbar-menu {
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Position below the navbar (height of navbar) */
+    left: 0;
+    background-color: #285197; /* Match navbar background */
+    border-top: 1px solid #4666a3; /* Optional: adds a line above the expanded menu */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    z-index: 1000; /* Ensures menu is above other content */
+    padding: 8px 0; /* Padding for the dropdown container */
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show the menu when active (toggled by JS) */
+  }
+
+  .navbar-menu li {
+    margin-left: 0; /* Remove left margin for stacked items */
+    width: 100%;
+    text-align: left; /* Or 'center' if you prefer */
+  }
+
+  .navbar-menu li a {
+    display: block; /* Make links take full width for easier tapping */
+    padding: 12px 24px; /* Adjust padding for menu items in dropdown */
+    border-radius: 0; /* No border-radius for individual items */
+    border-bottom: 1px solid #3b5a94; /* Subtle separator for items */
+  }
+
+  .navbar-menu li:last-child a {
+    border-bottom: none; /* Remove border from the last item */
+  }
+
+  .navbar-menu li a.active,
+  .navbar-menu li a:hover {
+    background: #4666a3; /* Hover/active style for dropdown items */
+    color: #fff;
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggler button on small screens */
+    position: absolute; /* Position it relative to the navbar */
+    right: 16px; /* Align with navbar padding */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+  }
 }
