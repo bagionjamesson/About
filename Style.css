@@ -276,23 +276,7 @@ body {
 }
 
 /* ===== CAR LESSON CARD STYLES ===== */
-.car-lesson-card {
-  display: flex; /* Use flexbox to stack content */
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  text-decoration: none; /* Remove underline from link */
-  background-color: #FFD600; /* Bright yellow background */
-  color: #204080; /* Dark blue text */
-  padding: 30px 20px; /* Padding inside the card */
-  border-radius: 16px; /* Rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 220px; /* Fixed width for the card */
-  min-height: 180px; /* Ensure a decent height */
-  text-align: center; /* Center text content within the card */
-  /* margin-bottom: 20px; Removed as gap property on parent handles spacing */
-  justify-content: center; /* Vertically center content within the card */
-}
+
 
 .car-lesson-card:hover {
   transform: translateY(-5px); /* Lift effect on hover */
@@ -368,9 +352,9 @@ body {
   text-align: left;
   flex: 1 1 0;
   background: #285197;
-  border-radius: 14px;
+  border-radius: 200px;
   box-shadow: 0 4px 18px rgba(40,81,151,0.18);
-  padding: 24px 18px;
+  padding: 0p 18px;
   margin: 0 0 24px 0;
   transition: box-shadow 0.2s, background 0.2s;
   color: #204080;
@@ -429,10 +413,17 @@ body {
 .footer-contact .footer-social-link svg {
   transition: fill 0.2s, color 0.2s;
 }
-.footer-social-link.mail:hover svg { fill: #FFD600; }
+.footer-social-link.mail:hover svg { fill: #000000; }
 .footer-social-link.phone:hover svg { fill: #4CAF50; }
 .footer-social-link.location:hover svg { fill: #03a9f4; }
-.footer-social-link { vertical-align: middle; margin-right: 10px; }
+.footer-social-link.instagram:hover svg { fill: #E1306C; } /* Example Instagram pink for icon hover */
+.footer-social-link.facebook:hover svg { fill: #3b5998; } /* Example Facebook blue for icon hover */
+.footer-social-link {
+  vertical-align:auto;
+  margin-right: 10px;
+  color: #ffffff; /* Ensures text inside the link is white */
+  text-decoration: none; /* Removes underline from the link text */
+}
 .footer-social-link:last-child { margin-right: 0; }
 .footer-icon { margin-right: 8px; }
 .footer-bottom {
